@@ -1,35 +1,49 @@
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.container {
-  max-width: 1310px;
+
+header {
+  display: flex;
+  height: 80px;
+  border-bottom: 2px solid rgba(66, 66, 66, 0.4);
+  align-content: center;
 }
 .header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 80px;
-  border-bottom: 2px solid rgba(66, 66, 66, 0.4);
-  width: 1440px;
-  height: 80px;
+  width: 1310px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: auto;
+  padding: 0px;
 }
 .logo {
+  margin-right: 0px;
   width: 193px;
   height: 40px;
   background-color: #c4c4c4;
   border-radius: 21px;
 }
+
 .nav {
-  list-style: none;
-  margin: 0px;
-  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
 }
 .nav-item {
+  padding-right: 40px;
   position: relative;
-  display: inline-block;
-  padding-left: 40px;
-  float: right;
+}
+.nav-item:last-of-type {
+  padding-right: 0px;
 }
 .nav-link {
   color: #353535;
@@ -38,24 +52,30 @@ body {
   line-height: 29px;
   text-decoration: none;
 }
+
 .dropdown-list {
   padding: 32px 24px;
   position: absolute;
   z-index: 1000;
   display: none;
-  top: 70px;
+  top: 30px;
   width: 229px;
-  height: 138px;
   border: 2px solid rgba(66, 66, 66, 0.4);
+  border-top: 0px;
   border-radius: 4px;
   list-style-type: none;
-}
-.nav-item:hover .dropdown-list {
-  display: block;
+  background-color: white;
 }
 .dropdown {
   padding-bottom: 16px;
 }
+.dropdown:last-of-type {
+  padding-bottom: 0px;
+}
+.nav-item:hover .dropdown-list {
+  display: block;
+}
+
 .dropdown-link {
   color: #3a3a3a;
   font-size: 24px;
@@ -64,20 +84,17 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
-.clearfix {
-  clear: both;
-}
-.home {
-  width: 1440px;
-  height: 1024px;
-  background-color: #ffffff;
-  border: 2px solid rgba(66, 66, 66, 0.4);
-}
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
 .text {
+  margin: 0px;
   font-size: 80px;
   font-weight: 900;
   line-height: 98px;
   font-family: montserrat;
-  text-align: center;
 }
